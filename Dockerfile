@@ -5,7 +5,7 @@ RUN mkdir -p /src
 WORKDIR /src
 COPY . /src/
 
-RUN pip install .
+RUN pip install -r requirements.txt .
 RUN python setup.py install
 
 ENTRYPOINT ["/src/build/scripts-3.7/riskquant"]
