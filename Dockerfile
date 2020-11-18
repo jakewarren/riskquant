@@ -7,5 +7,6 @@ COPY . /src/
 
 RUN pip install -r requirements.txt .
 RUN python setup.py install
+RUN pip install jupyter
 
-ENTRYPOINT ["/src/build/scripts-3.7/riskquant"]
+CMD ["jupyter", "notebook", "--port=3000", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
