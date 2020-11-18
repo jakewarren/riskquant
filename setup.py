@@ -1,10 +1,10 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 version = '0.1.0'  # Must correspond to a git tag
 
 setup(
     name='riskquant',
-    packages=['riskquant'],
+    packages=find_packages(),
     version=version,
     license='apache-2.0',
     author='Netflix Detection team',
